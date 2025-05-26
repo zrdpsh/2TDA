@@ -26,7 +26,6 @@ final class ParsedLine {
   }
 }
 
-
 abstract class BaseLogParser implements LogParser {
   //BaseLogParser хранит объект StringHandler во внутреннем поле - композиция, отношение HAS-A
   private final StringHandler sink;
