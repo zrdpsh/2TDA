@@ -45,7 +45,7 @@ public class DataProcessor {
     }
 }
 
-// ради чего все затевалось - закидываем **что-то** в обработчик одной командой, нюансы живут отдельно
+// ради чего все затевалось - закидываем *что-то* в обработчик одной командой, нюансы живут отдельно
 public class Main {
     public static void main(String[] args) {
         DataStorage storage = new FileStorage(); // или DbStorage, не имеет значения
