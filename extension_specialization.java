@@ -14,7 +14,6 @@ class Logger {
     }
 }
 
-
 // расширение - метод лог выводит больше информации
 class DetailedLogger extends Logger {
     public DetailedLogger(String component) {
