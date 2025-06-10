@@ -77,6 +77,26 @@ public class TimestampedSink extends StdoutSink {
     }
 }
 ```
+Также нужен вспомогательный класс для методов accept внутри sink-ов
+```java
+public final class ParsedLine {
+    private final String message;
+    private final String ip;
+
+    public ParsedLine(String message, String ip) {
+        this.message = message;
+        this.ip = ip;
+    }
+
+    public String message() {
+        return message;
+    }
+
+    public String ip() {
+        return ip;
+    }
+}
+```
 
 
 - Наконец, в итоговом классе можно собрать всё вместе - два поля типа LineSink (simpleSink и timedSink) и два обработчика для этих полей (apacheParser и nginxParser).
