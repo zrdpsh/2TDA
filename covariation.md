@@ -1,4 +1,4 @@
-1. Ковариантность возвращаемых типов.
+## 1. Ковариантность возвращаемых типов.
 
 Имеем:
 Интерфейс парсера
@@ -44,7 +44,7 @@ class ApacheParserFactory extends ParserFactory {
 
 
 
-2. Дженерики
+## 2. Дженерики
 Создаём список парсеров
 ```java
 List<ApacheLogParser> apacheParsers = List.of(
