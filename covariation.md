@@ -25,7 +25,7 @@ abstract class ParserFactory {
 ```java
 class ApacheLogParser extends BaseLogParser {
     public ApacheLogParser(LineSink sink) { super(sink); }
-    @Override public void parseLine(String line) { /* … */ }
+    @Override public void parseLine(String line) { /* .. .. .*/ }
 }
 ```
 Конкретную реализацию фабрики, использующую конкретную реализацию парсера
