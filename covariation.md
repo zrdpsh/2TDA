@@ -37,18 +37,25 @@ class ApacheParserFactory extends ParserFactory {
     }
 }
 ```
+Смысл конструкции в том, что мы закладываем будущую вариантивность сразу в двух местах - и в классе, реализующем функциональность, и в "метаклассе", который его использует.
+Любая фабрика, наследующая от ParserFactory, может использовать любой из парсеров логов, наследующих от BaseLogParser. 
 
+
+
+
+
+2. Дженерики
+Создаём список парсеров
 ```java
+List<ApacheLogParser> apacheParsers = List.of(
+    new ApacheLogParser(new StdoutSink())
+);
 ```
-
+Теперь его можно присваивать переменной ..
 ```java
+List<? extends BaseLogParser> parsers = apacheParsers;
 ```
-
+.. и считывать из списка, задавая конкретный тип  - т.е. мы можем быть уверены, что возвращаемое значение - один из наследников BaseLogParser, а не что-то ещё.
 ```java
-```
-
-```java
-```
-
-```java
+BaseLogParser p = parsers.get(0);
 ```
