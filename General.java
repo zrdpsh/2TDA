@@ -169,11 +169,6 @@ public abstract class General implements Cloneable, Serializable {
   }
 }
 
-// класс, от которого можно наследоваться
-public class Any extends General {
-    // пока пусто
-}
-
 
   
 
