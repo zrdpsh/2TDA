@@ -1,5 +1,6 @@
 public abstract class General implements Cloneable, Serializable {
 
+  
   // здесь мы глубоко копируем содержимое
   public void deepCopyTo(General target) extends Object throws IOException, ClassNotFoundException {
     ByteArrayOutputStream bos = new ByteArrayOutputStream();
