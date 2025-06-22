@@ -55,7 +55,7 @@ public class Main {
 
         System.out.println("Clone: " + result.deepClone());        // печатает None
         System.out.println("Serialize: " + result.serialize());    // печатает "None"
-        System.out.println("Equals itself: " + result.equals(result)); 
+        System.out.println("Equals: " + result.equals(result)); 
         
         General target = new Any();                                
         result.deepCopyTo(target);
