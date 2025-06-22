@@ -10,7 +10,7 @@ public abstract class BaseLogParser implements LogParser {
   protected void emit(String msg, String ip) { sink.accept(new ParsedLine(msg, ip)); }
 }
 
-// реализация одного из фактических классов в иерархии
+// реализация одного "обычного" класса в иерархии
 public class ApacheLogParser extends BaseLogParser {
   public ApacheLogParser(LineSink sink) { super(sink); }
   @Override
@@ -23,4 +23,33 @@ public class ApacheLogParser extends BaseLogParser {
 }
 ```
 
+2. Теперь добавляем NoneParser
+```java
+public final class NoneParser extends BaseLogParser {
+  public static final NoneParser INSTANCE = new NonParser();
 
+  private NoneParser() {
+    // sink нужно переопределить, чтобы не возникло null
+    super(line -> {});
+  }
+
+  @Override
+  public void parseLine(String line) {
+    // теперь метод ничего не делает
+  }
+}
+```
+
+3. И теперь - в обоих вызовах parseLine выполнение остаётся внутри иерархии Parser, независимо от того, что попадается на входе:
+```java
+public class LogApp {
+  public static void main(String[] args) {
+    // получаем "откуда-то" флажок
+    boolean isParsing = false;
+    LogParser parser = isParsing ? new ApacheLogParser(new StdoutSink()) : NoneParser.INSTANCE;
+    
+    parser.parseLine("192 001 001 001");
+    parser.parseLine(" ");
+  }
+}
+```
