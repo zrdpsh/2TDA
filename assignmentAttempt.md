@@ -13,6 +13,7 @@ public abstract class General implements Serializable {
 }
 ```
 
+
 2. Теперь проверка на соответствие типу упакована внутрь одного общего метода:
 ```java
 public class Main {
