@@ -24,7 +24,6 @@ public interface LineSink {
 }
 ```
 
-
 - Далее - создаём завершённые классы, для BaseLogParser - в первом случае, и реализающие интерфейс LinkSink - во втором.
 ```java
 public class ApacheLogParser extends BaseLogParser {
