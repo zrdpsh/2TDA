@@ -23,6 +23,7 @@ public class ApacheLogParser extends BaseLogParser {
 }
 ```
 
+
 2. Теперь добавляем NoneParser
 ```java
 public final class NoneParser extends BaseLogParser {
