@@ -2,7 +2,7 @@
 ```java
 class Employee {
     String name;
-    String employeeType; // "perHour", "salary", "percent"
+    String employeeType;
 
     public double calculatePay() {
         if (employeeType.equals("perHour")) {
