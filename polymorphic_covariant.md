@@ -16,22 +16,11 @@ class FileLogger implements Logger {
     }
 }
 
-class Service {
-    private final Logger logger;
-
-    public Service(Logger logger) {
-        this.logger = logger;
-    }
-
-    public void doWork() {
-        logger.log("Doing work");
-    }
-}
 
 public class Demo {
     public static void main(String[] args) {
         Logger logger = new ConsoleLogger(); 
-        logger.log("one message"); /
+        logger.log("one message");
 
         logger = new FileLogger();
         logger.log("other message");
