@@ -29,6 +29,7 @@ public class Demo {
 
 ```
 
+
 2. Пример ковариантного вызова:
 ```java
 class Animal {
