@@ -6,7 +6,7 @@ class Person {
   }
 }
 
-//
+// здесь сигнатура метода полностью совпадает с родительской
 class StuffPerson extends Person {
   @Override
   public void logInto(String login) {
@@ -14,7 +14,7 @@ class StuffPerson extends Person {
   }
 }
 
-//
+// здесь - новый аргумент с для метода с тем же именем, в Java для такого Override не нужен
 class ClientPerson extends Person {
   public void logInto(String login, int clientId) {
     System.out.println("Client with login " + login + " and client ID " + clientId);
@@ -27,6 +27,33 @@ class ClientPerson extends Person {
 ```java
 abstract class Shape {
   public abstract double area();
+}
+
+class Circle extends Shape {
+  private double radius;
+
+  public Circle(double radius) {
+    this.radius = radius;
+  }
+
+  @Override
+  public double area() {
+    return Math.PI * radius * radius;
+  }
+}
+
+class Rectrangle extends Shape {
+  private double width, height;
+
+  public Rectangle(double width, double height) {
+    this.width = width;
+    this.height = height;
+}
+
+  @Override
+  public double area() {
+    return widht * height;
+  }
 }
 ```
 
