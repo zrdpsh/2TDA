@@ -16,7 +16,8 @@ class HttpsRequest extends HttpRequest {
     }
 
     private void handshake(String url) {
-        System.out.println("Performing TLS handshake with " + url);
+        System.out.println("Performing handshake with " + url);
+        //
         this.secretKey = "sessionKey123";
     }
 
