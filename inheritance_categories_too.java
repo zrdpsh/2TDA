@@ -23,6 +23,8 @@ class ClientPerson extends Person {
 ```
 
 
+
+
 // 2. Наследование с конкретизацией.
 ```java
 abstract class Shape {
