@@ -17,7 +17,7 @@ class HttpsRequest extends HttpRequest {
 
     private void handshake(String url) {
         System.out.println("Performing handshake with " + url);
-        //
+        // заглушка
         this.secretKey = "sessionKey123";
     }
 
