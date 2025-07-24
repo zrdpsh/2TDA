@@ -59,13 +59,13 @@ interface PlatformType {
 
 class FixedWingPlatform implements PlatformType {
     public void fly() {
-        System.out.println("у меня крылья");
+        System.out.println("У меня крылья");
     }
 }
 
 class MultirotorPlatform implements PlatformType {
     public void fly() {
-        System.out.println("у меня винты");
+        System.out.println("У меня винты");
     }
 }
 ```
