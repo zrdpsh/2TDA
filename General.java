@@ -18,7 +18,7 @@ public abstract class General implements Cloneable, Serializable {
   protected void copyFrom(General trgt) {
   }
 
-  
+
   // глубокое клонирование
   public General deepClone() throws IOException, ClassNotFoundException {
     ByteArrayOutputStream bos = new ByteArrayOutputStream();
@@ -79,6 +79,7 @@ public abstract class General implements Cloneable, Serializable {
             return true;
         }
 
+      
         if (isPrimitiveOrWrapper(a.getClass()) || a instanceof String) {
             return a.equals(b);
         }
