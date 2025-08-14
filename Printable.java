@@ -19,6 +19,7 @@ class TextDocument implements Printable {
   }
 }
 
+
 class Image implements Printable {
   private String fileName;
 
