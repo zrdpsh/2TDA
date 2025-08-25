@@ -5,7 +5,6 @@ interface Printable {
 // Когда наследовать имеет смысл именно абстрактное свойство - здесь обоим классам нужно что-то печатать,
 // но это что-то в каждом случае принципиально своё
 
-
 class TextDocument implements Printable {
   private String documentContent;
 
